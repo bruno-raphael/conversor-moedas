@@ -1,0 +1,116 @@
+/* Estilos básicos para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 50%, #008f68 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contêiner principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo para o cabeçalho */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Estilos para os grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Rótulos dos campos do formulário */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Campos de entrada do formulário */
+input[type="number"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #495057;
+    overflow: auto; /* Adiciona rolagem se necessário */
+}
+
+/* Estilo para os menus suspensos */
+select {
+    height: auto;
+    max-height: 200px; /* Ajuste conforme necessário */
+}
+
+/* Botão de submissão do formulário */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o resultado da conversão */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+/* Consultas de mídia para responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input[type="number"], select, button {
+        font-size: 0.9em;
+    }
+}
